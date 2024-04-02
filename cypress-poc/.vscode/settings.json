@@ -1,0 +1,25 @@
+{
+    "eslint.packageManager": "npm",
+    "editor.formatOnSave": true,
+    "eslint.lintTask.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    // "cucumberautocomplete.syncfeatures": true,
+    // "cucumberautocomplete.strictGherkinCompletion": false,
+    // "cucumberautocomplete.onTypeFormat": true,
+    // "cypressHelper.commandForOpen": "cy:cucumber:open",
+    // "cypressHelper.customCommandsFolder": "cypress/support",
+    // "cucumberautocomplete.steps": [
+    //     "cypress/integration/cucumber/**/*.js"
+    // ],
+    // "cypressHelper.cucumberTagsAutocomplete": {
+    //     "enable": true,
+    //     "allurePlugin": true,
+    //     "tags": [
+    //         "focus",
+    //         "myTag",
+    //         "someOtherTag"
+    //     ]
+    // }
+}

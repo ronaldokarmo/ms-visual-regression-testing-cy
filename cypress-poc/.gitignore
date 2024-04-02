@@ -1,0 +1,12 @@
+
+.DS_Store
+cypress/.DS_Store
+cypress/screenshots/
+cypress/videos/s
+cypress/results/
+node_modules/
+results/
+test-results/
+yarn-error.log
+debug.log
+./vscode

@@ -1,0 +1,28 @@
+{
+    "name": "cypress-allure-plugin-example",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "Apache-2.0",
+    "scripts": {
+        "cy:open": "cypress open --env allure=true --config integrationFolder=cypress/integration/examples,testFiles=**/*.js --browser chrome",
+        "cy:run": "cypress run --config video=false,integrationFolder=cypress/integration/examples --env allure=true --browser chrome",
+        "cy:run:local": "cypress run --config integrationFolder=cypress/integration/examples --env allure=true",
+        "cy:cucumber:open": "cypress open --env allure=true --config integrationFolder=cypress/integration/cucumber,ignoreTestFiles=*.js,testFiles=**/*.{feature,features} --browser chrome",
+        "cy:cucumber:run": "cypress run --config video=false,ignoreTestFiles=*.js,testFiles=**/*.{feature,features} --env allure=true --browser chrome",
+        "cy:cucumber:run:local": "cypress run --config ignoreTestFiles=*.js,testFiles=**/*.{feature,features} --env allure=true --browser chrome",
+        "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots cypress/videos || true",
+        "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
+        "allure:report": "allure generate allure-results --clean -o allure-report",
+        "allure:open": "allure open allure-report"
+    },
+    "devDependencies": {
+        "@shelex/cypress-allure-plugin": "^1.8.3",
+        "cypress": "^5.6.0",
+        "cypress-cucumber-preprocessor": "^3.0.0",
+        "eslint-plugin-chai-friendly": "^0.5.0",
+        "eslint-plugin-cypress": "^2.10.3"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    }
+}
